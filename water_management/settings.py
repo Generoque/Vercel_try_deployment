@@ -85,11 +85,15 @@ WSGI_APPLICATION = 'water_management.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'URL': 'postgresql://postgres:UQh5l6IykLdVfpQnUHiD@containers-us-west-177.railway.app:6016/railway',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'UQh5l6IykLdVfpQnUHiD',
+        'HOST': 'containers-us-west-177.railway.app',
+        'PORT': 6016,
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
